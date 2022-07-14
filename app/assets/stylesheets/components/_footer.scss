@@ -1,5 +1,5 @@
 .footer {
-  background: #54BEBC;
+  background: #013b8b;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -24,7 +24,7 @@
 
 .footer-about-us {
   a {
-    color: #1b3b3b;
+    color: #ffffff;
     opacity: 0.95;
     text-decoration: none;
     font-size: 17px;
@@ -34,9 +34,6 @@
       opacity: 1;
     }
   }
-  .fas fa-heart {
-    color: #1b3b3b;
-    opacity: 0.9;
-  }
+ 
 
 }
