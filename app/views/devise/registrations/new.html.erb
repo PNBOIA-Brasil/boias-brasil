@@ -1,32 +1,29 @@
 <div class="new-container mt-5" data-controller="flatpickr">
   <h2></h2>
-  <h2>Cadastro</h2>
+  <h2>Inscrição</h2>
 
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= f.error_notification %>
 
     <div class="form-inputs">
-      <%= f.input :first_name, :label => "Nome",
+      <%= f.input :first_name, :label => "Nome completo",
                   required: true %>
-      <%= f.input :last_name, :label => "Sobrenome",
-                  required: true %>
-      <%= f.input :gender, :label => "Sexo",
-                  required: true,
-                  collection: User::GENDER %>
       <%= f.input :birthday, :label => "Nascimento",
                   as: :string,
                   required: true,
                   input_html: {class: "datepicker"} %>
-      <%= f.input :cellphone %>
-      <%= f.input :cpf %>
-      <%= f.input :user_type, :label => "Tipo de usuário",
+      <%= f.input :cpf , :label => "CPF",
+                  required: true %>
+      <%= f.input :cellphone, :label => "Telefone",
+                  required: true %>
+      <%# <%= f.input :user_type, :label => "Tipo de usuário",
                   required: true,
                   collection: User::USER_TYPE %>
       <%= f.input :email,
                   required: true,
                   autofocus: true,
                   input_html: { autocomplete: "email" }%>
-      <%= f.input :street, :label => "Rua",
+      <%= f.input :street, :label => "Endereço",
                   required: true,
                   autofocus: true,
                   input_html: { autocomplete: "rua" }%>
@@ -38,21 +35,25 @@
                   required: true,
                   autofocus: true,
                   input_html: { autocomplete: "cidade" }%>
-      <%= f.input :password, :label => "Senha",
+      <%= f.input :city, :label => "Estado",
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "estado" }%>
+      <%# <%= f.input :password, :label => "Senha",
                   required: true,
                   hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                   input_html: { autocomplete: "new-password" } %>
-      <%= f.input :password_confirmation, :label => "Confirme a senha",
+      <%# <%= f.input :password_confirmation, :label => "Confirme a senha",
                   required: true,
                   input_html: { autocomplete: "new-password" } %>
-      <%= f.input :photo,
+      <%# <%= f.input :photo,
                   as: :file,
                   placeholder:"Image",
                   :label => 'Foto:'%>
     </div>
 
     <div class="form-actions">
-      <%= f.button :submit, "Cadastrar", class: "btn-login" %>
+      <%= f.button :submit, "Inscrever-se", class: "btn-login" %>
     </div>
   <% end %>
 

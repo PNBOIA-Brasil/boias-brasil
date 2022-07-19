@@ -48,12 +48,12 @@
 }
 
 .btn-donation {
-  color: #008036;
+  color: #008cea;
   background-color: #fff;
   padding: 10px 20px;
-  border-radius: 200px;
-  border: 1px solid #008036;
-  width: 30%;
+  border-radius: 5px;
+  border: 1px solid #008cea;
+  width: 15%;
   font-weight: 700;
   font-size: 20px;
   display: inline-block;
@@ -61,8 +61,8 @@
   text-align: center;
 
   &:hover {
-    background-color: #008036;
+    background-color: #f0e11b;
     color: white;
-    border: 1px solid #008036;
+    border: 1px solid #f0e11b;
   }
 }
