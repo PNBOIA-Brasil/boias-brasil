@@ -1,7 +1,7 @@
 <div class="new-container">
 
 <div class="form-container" data-controller="display-results" data-display-results-position-value="beforeend">
-  <h1 class="mb-5">Nova doação</h1>
+  <h1 class="mb-5">Inscrição</h1>
     <div class="search-bar d-flex mt-4 mb-3">
       <div class="form-search col-10">
         <%= form_for :query, url: medications_path, method: :get, remote: true,
@@ -12,8 +12,8 @@
           <div class="d-flex justify-content-between">
             <%= f.text_field :query,
               class: "form-control mx-2",
-              placeholder: "Digite o nome do medicamento ou princípio ativo", data: { display_results_target: "input" }%>
-            <%= f.submit "Procurar", class: "btn-donation mx-2"%>
+              placeholder: "Nome completo", data: { display_results_target: "input" }%>
+            <%# <%= f.submit "Procurar", class: "btn-donation mx-2" %>
           </div>
       <% end %>
       </div>
@@ -28,14 +28,14 @@
         <%= f.input :medication_id, :label => false , as: :hidden, input_html: { value: params[:medication_id] } %>
         <div class="row">
           <div class= "form-medication col-5">
-            <%= f.input :units, :label => "Nº de comprimidos", class:'d-none' %>
+            <%= f.input :units, :label => "CPF", class:'d-none' %>
           </div>
            <div class= "form-medication col-5">
-            <%= f.input :expiry_date, label: "Data de validade", class: "d-none", as: :string, required: true, input_html: { class: "datepicker" } %>
+            <%= f.input :expiry_date, label: "Data de nascimento", class: "d-none", as: :string, required: true, input_html: { class: "datepicker" } %>
           </div>
         </div>
           <div class="col-10">
-            <%= f.association :pharmacy, :label => "Local de coleta", collection: @pharmacies.sort_by{ |p| p.pharmacy_name }, label_method: :pharmacy_name %>
+            <%= f.association :pharmacy, :label => "Endereço", collection: @pharmacies.sort_by{ |p| p.pharmacy_name }, label_method: :pharmacy_name %>
             <%= f.button :submit, "Doar", class: 'btn-principal' %>
           </div>
       </h5>
