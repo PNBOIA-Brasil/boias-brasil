@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :pharmacies, only: :index
   resources :medications, only: :index
 
+  get 'programation', to: 'pages#programation'
   get 'medications/reservation', to: 'medications#reservation'
   get 'pages/about', to: 'pages#about', as: "about"
 
