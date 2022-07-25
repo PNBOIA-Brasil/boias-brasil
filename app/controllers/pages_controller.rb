@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   # require 'rqrcode'
 
-  skip_before_action :authenticate_user!, only: [:home, :about]
+  skip_before_action :authenticate_user!, only: [:home, :about, :programation]
 
   def home
   end

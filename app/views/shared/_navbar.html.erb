@@ -17,41 +17,18 @@
 
     <div class="collapse navbar-collapse bg-#0F4980" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
-        <% if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "Home", root_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Doar remédios", new_donation_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Reservar remédios", new_medication_order_path, class: "nav-link" %>
-          </li>
-
-          <li class="nav-item dropdown">
-            <% if current_user.photo.attached? %>
-              <%= cl_image_tag current_user.photo.key, width: 50, height: 45, crop: :thumb, gravity: :face, class: "photo dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <% else %>
-              <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "photo dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <% end %>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Perfil", edit_user_registration_path, class: "dropdown-item" %>
-              <%= link_to "Minhas Reservas", medication_orders_path, class: "dropdown-item" %>
-              <%= link_to "Minhas doações", donations_path, class: "dropdown-item" %>
-              <%= link_to "Sair", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-            </div>
-          </li>
-        <% else %>
-          <li class="nav-item">
-            <%= link_to "Programação", programation_path, class: "nav-link" %>
-          </li>
-          <%# <li class="nav-item">
-            <%= link_to "Reservar remédios", new_medication_order_path, class: "nav-link" %>
-          <%# </li> %>
-          <li class="nav-item">
-            <%= link_to "Inscrição", new_user_session_path, class: "nav-link" %>
-          </li>
-        <% end %>
+        <li class="nav-item active">
+          <%= link_to "Home", root_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Programação", programation_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#projetos">Sobre</a>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Inscrição", new_user_registration_path, class: "nav-link" %>
+        </li>
       </ul>
     </div>
   </div>

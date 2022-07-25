@@ -1,5 +1,5 @@
 <div class="new-container mt-5" data-controller="flatpickr">
-  <h2></h2>
+
   <h2>Inscrição</h2>
 
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
@@ -55,6 +55,11 @@
     <div class="form-actions">
       <%= f.button :submit, "Inscrever-se", class: "btn-donation mt-5" %>
     </div>
+  <div class="new-container">
+    <h2>Atenção:</h2>
+    <h3>Você receberá a confirmação de sua inscrição por email. Caso não receba nada até xx/xx, entre em contato através do email: xxxxxx@marinha.mil.br </h3>
+  </div>
+
   <% end %>
 
   <%# <%= render "devise/shared/links", class: "btn-white" %>
