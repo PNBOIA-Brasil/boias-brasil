@@ -12,13 +12,13 @@
                   as: :string,
                   required: true,
                   input_html: {class: "datepicker"} %>
-      <%= f.input :cpf , :label => "CPF",
-                  required: true %>
+      <%# <%= f.input :cpf , :label => "CPF",
+                  required: true %> 
       <%= f.input :cellphone, :label => "Telefone",
                   required: true %>
-      <%# <%= f.input :user_type, :label => "Tipo de usuário",
+      <%= f.input :user_type, :label => "Tipo de usuário",
                   required: true,
-                  collection: User::USER_TYPE %>
+                  collection: User::USER_TYPE%>
       <%= f.input :email,
                   required: true,
                   autofocus: true,
