@@ -2,11 +2,22 @@
   height: 100%;
   width: 100%;
   background-color: #FCFFFD;
+}
+.info-cont{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
 }
 
+.card-project {
+  text-align: -webkit-center;
+
+  img{
+  height: 100%;
+  width: 250px;
+  object-fit: contain;
+  }
+}
 .card-category {
   margin-top: 30px;
   background-size: cover;
@@ -48,7 +59,7 @@
   width: 100%;
   background-color: #FCFFFD;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 16px;
   margin-bottom: 0;
 }
@@ -124,94 +135,36 @@
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
   .info-cards {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .icon-cards {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
   .info-cards {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .icon-cards {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .info-cards {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .icon-cards {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
-
-.form-medication {
-  display: block;
-  border-radius: 30px;
-    // width: 50%;
-  font-weight: 400;
-  line-height: 1.5;
-  margin-bottom: 2rem;
-  background-color: #F4F4F4;
-  background-clip: padding-box;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-
-  .form-control {
-    width: 100%;
-  }
-}
-
-.card-medication {
-  background-color: #ebebeb;
-  margin-top: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 5px 5px 5px #d8d8d8;
-  width: 80%;
-
-  p {
-    margin: 0;
-  }
-
-  a {
-    margin: 0;
-  }
-
-  .btn-medication {
-    background-color: #54bebc;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 50px;
-    text-decoration: none;
-
-    &:hover {
-      background-color: #347574;
-      color: white;
-    }
-  }
-}
-
-
-// * {
-//   box-sizing: border-box;
-// }
 
 .page-contain {
   display: flex;
@@ -221,117 +174,9 @@
   background: #E7F3F1;
   border: .75em solid white;
   padding: 2em;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Fira Sans', 'sans-serif';
 }
 
-.data-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 500px;
-  min-height: 550px;
-  overflow: hidden;
-  border-radius: .5em;
-  text-decoration: none;
-  background: white;
-  margin: 1em;
-  padding: 2.75em 2.5em;
-  box-shadow: 0 1.5em 2.5em -.5em rgba(#000000, .1);
-  transition: transform .45s ease, background .45s ease;
-
-  h3 .title {
-    color: rgb(88, 85, 85);
-    font-size: 3em;
-    font-weight: 600;
-    line-height: 1;
-    padding-bottom: .5em;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin: 0 0 0.142857143em;
-    border-bottom: 2px solid #EE6780;
-    transition: color .45s ease, border .45s ease;
-    text-decoration: none;
-  }
-
-  h4 {
-    color: rgb(83, 81, 81);
-    text-transform: uppercase;
-    font-size: 1.125em;
-    font-weight: 700;
-    line-height: 1;
-    letter-spacing: 0.1em;
-    margin: 0 0 1.777777778em;
-    transition: color .45s ease;
-  }
-
-  h5 {
-    opacity: 0;
-    color: #FFFFFF;
-    font-weight: 600;
-    line-height: 1.8;
-    margin: 0 0 1.25em;
-    transform: translateY(-1em);
-    transition: opacity .45s ease, transform .5s ease;
-  }
-
-  .link-text {
-    display: block;
-    color: #EE6780;
-    font-size: 1.125em;
-    font-weight: 600;
-    line-height: 1.2;
-    margin: auto 0 0;
-    transition: color .45s ease;
-
-    svg {
-      margin-left: .5em;
-      transition: transform .6s ease;
-
-      path {
-        transition: fill .45s ease;
-      }
-    }
-  }
-
-  &:hover {
-    background: #EE6780;
-    transform: scale(1.02);
-
-    h3 {
-      color: #FFFFFF;
-      border-bottom-color: #943e4e;
-      text-decoration: none;
-    }
-
-    .title {
-      color: #FFFFFF;
-      border-bottom-color: #943e4e;
-      text-decoration: none;
-    }
-
-    h4 p {
-      color: #FFFFFF;
-    }
-
-    h5 {
-      opacity: 1;
-      transform: none;
-    }
-
-    .link-text {
-      color: #FFFFFF;
-
-      svg {
-        animation: point 1.25s infinite alternate;
-
-        path {
-          fill: #FFFFFF;
-        }
-      }
-    }
-  }
-}
 
 @keyframes point {
   0% {

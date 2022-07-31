@@ -1,29 +1,28 @@
 <div class="new-container mt-5" data-controller="flatpickr">
-
-  <h2>Inscrição</h2>
-
+  <h1 class='text-center title text-align-center pt-2 pb-2'>INSCRIÇÃO</h1>
+  <h3><strong>INFORMAÇÃO IMPORTANTE</strong></h3>
+  <h3>O 1° Boias-Brasil possui vagas limitadas para participação presencial. Dessa forma,
+  a sua inscrição passará por análise da comissão organizadora do evento para escolha dos
+  participantes. Essa escolha será realizada até o dia <strong>10 de outubro de 2022</strong>.
+  Caso você não seja escolhido para participação presencial, você poderá assistir o evento
+  remotamente</h3>
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= f.error_notification %>
-
     <div class="form-inputs">
       <%= f.input :first_name, :label => "Nome completo",
                   required: true %>
       <%= f.input :birthday, :label => "Nascimento",
-                  as: :string,
-                  required: true,
-                  input_html: {class: "datepicker"} %>
-      <%# <%= f.input :cpf , :label => "CPF",
-                  required: true %> 
+                  as: :date,
+                  required: true, html5: true %>
+      <p>CONTATO</p>
       <%= f.input :cellphone, :label => "Telefone",
-                  required: true %>
-      <%= f.input :user_type, :label => "Tipo de usuário",
-                  required: true,
-                  collection: User::USER_TYPE%>
+                  required: true  %>
       <%= f.input :email,
                   required: true,
                   autofocus: true,
                   input_html: { autocomplete: "email" }%>
-      <%= f.input :street, :label => "Endereço",
+      <p>ENDEREÇO</p>
+      <%= f.input :street, :label => "Rua",
                   required: true,
                   autofocus: true,
                   input_html: { autocomplete: "rua" }%>
@@ -39,28 +38,26 @@
                   required: true,
                   autofocus: true,
                   input_html: { autocomplete: "estado" }%>
-      <%# <%= f.input :password, :label => "Senha",
+      <p>INFORMAÇÕES PESSOAIS</p>
+      <%= f.input :user_type, :label => "Tipo de usuário",
                   required: true,
-                  hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                  input_html: { autocomplete: "new-password" } %>
-      <%# <%= f.input :password_confirmation, :label => "Confirme a senha",
-                  required: true,
-                  input_html: { autocomplete: "new-password" } %>
-      <%# <%= f.input :photo,
-                  as: :file,
-                  placeholder:"Image",
-                  :label => 'Foto:'%>
+                  collection: User::USER_TYPE%>
+      <%= f.input :institution, :label => "Nome da Instituição/Empresa",
+                  required: true %>
+      <p>EXPLIQUE SUA RELAÇÃO COM O PNBOIA</p>
+      <%= f.input :observation, :label => "Porque gostaria de participar do evento?",
+                  required: true %>
+      <p>ADICIONE AQUI LINKS IMPORTANTES (ARTIGOS, CURRÍCULO, ETC)</p>
+      <%= f.input :link1, :label => "Link1",
+                  required: true %>
+      <%= f.input :link2, :label => "Link2",
+                  required: true %>
+      <%= f.input :link3, :label => "Link3",
+                  required: true %>
     </div>
 
     <div class="form-actions">
-      <%= f.button :submit, "Inscrever-se", class: "btn-donation mt-5" %>
+      <%= f.button :submit, "Inscrever-se", class: "blue-button mt-5" %>
     </div>
-  <div class="new-container">
-    <h3>Atenção:</h3>
-    <h4>Você receberá a confirmação de sua inscrição por email. Caso não receba nada até xx/xx, entre em contato através do email: xxxxxx@marinha.mil.br </h4>
-  </div>
-
   <% end %>
-
-  <%# <%= render "devise/shared/links", class: "btn-white" %>
 </div>

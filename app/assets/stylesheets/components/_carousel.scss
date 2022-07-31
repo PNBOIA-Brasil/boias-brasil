@@ -1,72 +1,76 @@
-.banner-container {
-  // display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: calc(100vh - 60px - 40px);
+.front-page {
+  
+  height: 100vh;
   background-size: cover;
-  background-position: center;
-  padding: 0 120px;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: black;
+  .img { max-width: 100%; height: auto; }
 
   h1 {
-    width: 50%;
-    margin: 0;
-    color: #54bebc;
-    font-size: 50px;
-    font-style: italic;
-    font-weight: 700;
+    text-shadow: 1px 2px 0px white, -2px 1px 30px white;
+    font-weight: bold;
+    font-size: 70px;
   }
 
   p {
-    font-family: "Montserrat", "Helvetica", "sans-serif";
+    text-shadow: 2px 2px 0px white, -2px 1px 30px white;
     font-weight: bold;
-    padding: 15px;
-    width: 40%;
-    font-size: 25px;
-    color:#013b8b;
-    position: initial;
+    font-size: 30px;    
   }
-
-  #first-img-text {
-    color: #013b8b;
-  }
-
 }
 
-.carousel-item:nth-child(1) {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-
-.carousel-item:nth-child(2) {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-}
-
-.carousel-img {
-  padding: 150px 0;
-  height: 100vh;
-  width: 100%;
-}
-
-.btn-donation {
-  color: #008cea;
-  background-color: #fff;
-  padding: 10px 20px;
+.white-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  height: 60px;
+  width: 140px;
+  border: 4px solid white;
+  font-weight: bold;
+  float:right;
+  margin-right: 10px;
   border-radius: 5px;
-  border: 1px solid #008cea;
-  width: 15%;
-  font-weight: 700;
-  font-size: 20px;
-  display: inline-block;
-  text-decoration: none;
-  text-align: center;
-
+  text-shadow: 1px 0px 10px black;
   &:hover {
-    background-color: #008cea;
-    color: white;
-    border: 1px solid #008cea;
+    background-color: white;
+    color: grey;
+    text-shadow: none;
   }
+}
+
+a {
+  color: white;
+  font-size: 100%;
+}
+
+.date-p {
+  font-size: 20px !important;
+}
+
+.cont-white{
+  border-top: 6px solid white;
+  opacity: 1;
+  background-color: rgba(0,0,0,0);
+  border-radius: 5px;
+}
+.pont-white{
+  opacity: 1;
+  background-color: rgba(0,0,0,0);
+  border-top: 3px dotted white;
+  border-radius: 5px;
+}
+
+.title{
+  text-shadow: 1px 2px 0px white, -2px 1px 30px white;
+  font-weight: bold;
+  color: #013b8b;
+}
+
+.sobre{
+  font-size: 30px;
 }

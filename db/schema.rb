@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_17_022129) do
+ActiveRecord::Schema.define(version: 2022_07_31_205248) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,51 +43,6 @@ ActiveRecord::Schema.define(version: 2022_03_17_022129) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "donations", force: :cascade do |t|
-    t.date "expiry_date"
-    t.integer "units"
-    t.bigint "user_id", null: false
-    t.bigint "pharmacy_id", null: false
-    t.bigint "medication_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["medication_id"], name: "index_donations_on_medication_id"
-    t.index ["pharmacy_id"], name: "index_donations_on_pharmacy_id"
-    t.index ["user_id"], name: "index_donations_on_user_id"
-  end
-
-  create_table "inventories", force: :cascade do |t|
-    t.integer "units"
-    t.bigint "medication_id", null: false
-    t.bigint "pharmacy_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["medication_id"], name: "index_inventories_on_medication_id"
-    t.index ["pharmacy_id"], name: "index_inventories_on_pharmacy_id"
-  end
-
-  create_table "medication_orders", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "medication_id", null: false
-    t.bigint "pharmacy_id", null: false
-    t.integer "units"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.string "qr_code"
-    t.index ["medication_id"], name: "index_medication_orders_on_medication_id"
-    t.index ["pharmacy_id"], name: "index_medication_orders_on_pharmacy_id"
-    t.index ["user_id"], name: "index_medication_orders_on_user_id"
-  end
-
-  create_table "medications", force: :cascade do |t|
-    t.string "active_substance"
-    t.string "commercial_name"
-    t.string "lab"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.string "concentration"
-  end
-
   create_table "pg_search_documents", force: :cascade do |t|
     t.text "content"
     t.string "searchable_type"
@@ -95,15 +50,6 @@ ActiveRecord::Schema.define(version: 2022_03_17_022129) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["searchable_type", "searchable_id"], name: "index_pg_search_documents_on_searchable"
-  end
-
-  create_table "pharmacies", force: :cascade do |t|
-    t.string "pharmacy_address"
-    t.string "pharmacy_name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.float "latitude"
-    t.float "longitude"
   end
 
   create_table "users", force: :cascade do |t|
@@ -126,18 +72,16 @@ ActiveRecord::Schema.define(version: 2022_03_17_022129) do
     t.string "street"
     t.string "number"
     t.string "city"
+    t.string "institution"
+    t.text "observation"
+    t.text "link1"
+    t.text "link2"
+    t.text "link3"
+    t.boolean "result", default: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "donations", "medications"
-  add_foreign_key "donations", "pharmacies"
-  add_foreign_key "donations", "users"
-  add_foreign_key "inventories", "medications"
-  add_foreign_key "inventories", "pharmacies"
-  add_foreign_key "medication_orders", "medications"
-  add_foreign_key "medication_orders", "pharmacies"
-  add_foreign_key "medication_orders", "users"
 end

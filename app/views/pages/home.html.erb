@@ -1,6 +1,443 @@
+<div class="front-page" style="background-image: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,0)), url(https://res.cloudinary.com/dwzrjmdwm/image/upload/v1659018861/Boias%20Brasil/IMG_20220604_144029_qhdiay.jpg)" id="home">
+  <div class="container banner">
+    <hr class='cont-white'>
+    <hr class='pont-white'>
+    <div class="row mt-5 pt-5 mb-5 pb-5">
+      <div class="col-sm-12 col-md-12 col-lg-12 text-center ">
+        <div class="front-page-content1 pb-5">
+          <h1>1° BOIAS-BRASIL</h1>
+          <p class='mt-1'>ENCONTRO CIENTÍFICO DO PROGRAMA NACIONAL DE BOIAS</p>
+          <p class='date-p mt-1'>09 a 11 de novembro de 2022 - Niterói-RJ</p>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 col-lg-12 text-center justify-content-between">
+        <div class="row">
+          <div class="col-sm-6 col-md-6 col-lg-6 text-center ">
+            <%= link_to "INSCREVA-SE", new_user_registration_path, class:"white-button" %>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-6 text-center ">
+            <a href="#about">
+              <div class="blue-button">
+                SAIBA MAIS
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class='pont-white mt-3'>
+    <hr class='cont-white'>
+  </div>
+</div>
 
-<% if current_user&.donations.present? %>
-  <%= render "donorhome" %>
-<% else %>
-  <%= render "commonhome" %>
-<% end %>
+<div class="info-cards" id='about'>
+  <div class="info-cont container">
+    <div class="card-category">
+      <h2 id="counter1">10</h2>
+      <h4 class="px-2"> Boias lançadas</h4>
+    </div>
+    <div class="card-category">
+      <h2 id="counter2">80</h2>
+      <h4 class="px-2"> Trabalhos publicados</h4>
+    </div>
+    <div class="card-category">
+      <h2 id="counter3"><%= 24*365*40 %></h2>
+      <h4 class="px-2"> Horas de dados</h4>
+    </div>
+  </div>
+</div>
+<div class="container text-justify pt-3 pb-3">
+  <h1 class='text-center title text-align-center pt-2 pb-2'>1° BOIAS-BRASIL</h1>
+  <div class="align-items-center">
+    <div class="text-center">
+      <p class='sobre pt-3 pb-3'>Para comemorar seus 20 anos de coleta de dados, a equipe do Programa Nacional de Boias (PNBOIA) convida a todos para participar do 1° BOIAS-BRASIL (BB), que representa o primeiro
+      encontro puramente científico do PNBOIA.</p>
+      <p class='sobre pt-1'>O Objetivo do BB é estimular interações entre cientistas
+      e profissionais brasileiros que atuam no monitoramento e modelagem costeira ao longo do
+      território nacional, com ênfase nos dados oriundos do PNBOIA.</p>
+      <p class='sobre pt-1'> O evento será dividido em três dias. No primeiro dia, serão apresentados
+      a estrutura do PNBOIA e como funciona a sua coleta de dados e os principais sensores utilizados</p>
+      <p class='sobre pt-1'> No segundo e terceiro dia, serão convidados pesquisadores, profissionais
+      e professores usuários dos dados do PNBOIA para apresentar os principais resultados obtidos</p>
+    </div>
+  </div>
+</div>
+
+<div class='container'>
+  <div class='bg-white pt-2 pb-2'>
+    <h2 class='text-center text-align-center'>REALIZAÇÃO</h2>
+    <div class='row justify-content-center'>
+      <div class="col-sm-3 col-md-3 col-lg-3 text-center align-items-center">
+        <div class="icon-image mx-auto">
+          <%= image_tag("logo_marinha.png") %>
+        </div>
+      </div>
+      <div class="col-sm-3 col-md-3 col-lg-3 text-center align-items-center">
+        <div class="icon-image mx-auto">
+          <%= image_tag("logo_chm.png") %>
+        </div>
+      </div>
+      <div class="col-sm-3 col-md-3 col-lg-3 text-center align-items-center">
+        <div class="icon-image mx-auto">
+          <%= image_tag("logo_pnboia.png") %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class='bg-white mt-4 mb-4 pt-2 pb-2'>
+    <h2 class='text-center text-align-center'>PATROCINADORES</h2>
+    <div class='row justify-content-center'>
+      <div class="col-sm-3 col-md-3 col-lg-3 text-center align-items-center">
+        <div class="icon-image mx-auto">
+          <%= image_tag("logo_holos.png") %>
+        </div>
+      </div>
+      <div class="col-sm-3 col-md-3 col-lg-3 text-center align-items-center">
+        <div class="icon-image mx-auto">
+          <%= image_tag("logo_axys.png") %>
+        </div>
+      </div>
+      <div class="col-sm-3 col-md-3 col-lg-3 text-center align-items-center">
+        <div class="icon-image mx-auto">
+          <%= image_tag("logo_sofar.png") %>
+        </div>
+      </div>
+      <div class="col-sm-3 col-md-3 col-lg-3 text-center align-items-center">
+        <div class="icon-image mx-auto">
+          <%= image_tag("logo_messen.png") %>
+        </div>
+      </div>
+      <div class="col-sm-3 col-md-3 col-lg-3 text-center align-items-center">
+        <div class="icon-image mx-auto">
+          <%= image_tag("logo_hidromares.png") %>
+        </div>
+      </div>
+      <div class="col-sm-3 col-md-3 col-lg-3 text-center align-items-center">
+        <div class="icon-image mx-auto ">
+          <%= image_tag("logo_nortek.png") %>
+        </div>
+      </div>    
+    </div>
+  </div>
+</div>
+
+<div class="image-strip text-center" id="fundo">
+  <div class="container reveal">
+    <div class="line"></div>
+  </div>
+</div>
+
+<div class="container text-justify pb-4 pt-2" id="pnboia">
+  <h1 class='text-center title text-align-center pt-2 pb-2'>PNBOIA</h1>
+  <div class="row align-items-center">
+    <div class="col-sm-12 col-md-6 col-lg-6 mt-2 align-items-center">
+      <h6>O Programa Nacional de Boias (PNBOIA), gerenciado pelo Centro de Hidrografia da Marinha (CHM), tem por objetivo geral, disponibilizar à
+      comunidade de interessados, os dados meteorológicos e oceanográficos, obtidas nas áreas oceânicas de interesse do Brasil em tempo quase-real.
+      Estes dados são provenientes de boias meteocenográficas fixas e de deriva que estão disposta ao longo da costa brasileira. Essas boias constituem
+      uma rede com o objetivo de fornecer dados meteorológicos e oceanográficos em tempo real para a sociedade, para a comunidade científica e para o S
+      erviço Meteorológico Marinho (SMM) da MB. </h6>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-6 mt-2 align-items-center">	
+      <div class= "card-project text-align-center ">
+        <%= image_tag "boia_noronha.jpg"%>
+      </div>			
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-6 mt-2 align-items-center">	
+      <div class= "card-project text-align-center ">
+        <%= image_tag "boia_noronha.jpg"%>
+      </div>			
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-6 mt-2 align-items-center">
+      <h6>O PNBOIA foi criado em 1997 e o seu primeiro sistema de coleta de dados foi implementado em 2000, com o lançamento de uma boia meteoceanográfica
+      no litoral sul do Brasil. O PNBOIA é a primeira iniciativa brasileira, em nível nacional, para o monitoramento operacional de informações meteorológicas
+        e são essenciais para a melhoria da previsão meteorológica marinha e climatológica sobre a região do Oceano Atlântico Sul e tropical.</h6>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-6 mt-2 align-items-center">	
+      <h6>Em complementação ao PNBOIA, o CHM, em parceria com a Petrobras, desenvolveram o projeto “Consolidação para o Desenvolvimento da Boia Meteoceanográfica
+      Nacional” (REMObs). Em sua forma mais abrangente, o seu objetivo é consolidar o desenvolvimento da Boia Meteoceanográfica Nacional (BMO-BR), por meio da
+      coleta de dados meteorológicos e oceanográficos de modo a atender demandas da Indústria de Petróleo (Pré-Sal), da Defesa Nacional e da Segurança da Navegação.
+      Como objetivos específicos, o projeto prevê também complementar a rede de coleta de dados do Programa Nacional de Boias (PNBOIA) na obtenção de dados ambientais.</h6>
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-6 mt-2 align-items-center">	
+      <div class= "card-project text-align-center ">
+        <%= image_tag "boia_noronha.jpg"%>
+      </div>			
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-6 mt-2 align-items-center">	
+      <div class= "card-project text-align-center ">
+        <%= image_tag "boia_noronha.jpg"%>
+      </div>			
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-6 mt-2 align-items-center">	
+      <h6>Ao longo dos mais de 22 anos de coleta efetiva de dados, o PNBOIA e o REMObs já realizaram o lançamento de 22 boias de fundeio ao longo da costa brasileira
+      e Antártica, além do lançamento de boias de deriva e outros sistemas autônomos de coleta de dados ambientais.</h6>
+    </div>
+  </div>
+</div>
+
+<div class="image-strip text-center" id="fundo">
+  <div class="container reveal">
+    <div class="line"></div>
+  </div>
+</div>
+
+<div class="new-container" id="schedule">
+  <div class="wrapper">
+    <h1 class='text-center title text-align-center pt-2 pb-2'>PROGRAMAÇÃO</h1>
+    <div class="tabs">
+      <nav class="tabs__nav" role="tablist">
+        <button class="tabs__btn is-active" data-tab-target="tab-1" type="button" role="tab" aria-selected="true">Dia 1: 09NOV</button>
+        <button class="tabs__btn" data-tab-target="tab-2" type="button" role="tab" aria-selected="false">Dia 2: 10NOV</button>
+        <button class="tabs__btn" data-tab-target="tab-3" type="button" role="tab" aria-selected="false">Dia 3: 11NOV</button>
+      </nav>
+      <div class="tabs__content">
+        <div class="tabs__pane is-visible table-content" id="tab-1" role="tabpanel">
+          <h3 class='text-center title text-align-center pt-2 pb-2'>DIA 1: 09 DE NOVEMBRO</h3>
+          <ul class="list-timeline list-timeline-primary">
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">09:00 - 09:10</span> - Abertura - CMG Costa Junior (CHM)</p>
+            </li>
+            <div>
+              <h4>SESSÃO 1: Programa Nacional de Boias e REMO Observacional</h4>
+            </div>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">09:10-09:30</span> - “PROGRAMA NACIONAL DE BOIAS (PNBOIA) E REMO OBSERVACIONAL (REMObs): AVANÇOS E PERSPECTIVAS” - Ten. Tobias Ferreira (CHM)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">09:30-09:50</span> - “GESTÃO OPERACIONAL DOS PROGRAMAS”
+              - Ten. Tobias Ferreira (CHM)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column" data-toggle="collapse" data-target="#day-1-item-4">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">09:50-10:10</span> - “CONTROLE DE QUALIDADE DE DADOS”
+              - Felippe Galdino (CHM)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">10:10-10:30</span> - “SENSORES E DESENVOLVIMENTO DE TECNOLOGIAS”
+                - Natália (CHM)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column" data-toggle="collapse" data-target="#day-1-item-6">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">10:30-10:50</span> - “SISTEMAS E SOFTWARES UTILIZADOS PELO PNBOIA/REMOBS”
+                - Felippe Galdino (CHM)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">10:50-11:10</span> - Coffee Break</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">11:10-11:30</span> - “LINHAS DE FUNDEIO”
+                - Dsc. Fábio Nascimento (LIOc/COPPE)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column" data-toggle="collapse" data-target="#day-1-item-6">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">11:30-11:50</span> - “DESAFIOS EM SISTEMAS DE FUNDEIOS EM ÁGUAS RASAS – PROGRAMA SiMCosta”
+                - Msc. Ella Soares Pereira (SiMCosta)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">11:50-12:10</span> - “DESAFIOS EM SISTEMAS DE FUNDEIOS EM ÁGUAS RASAS – PROGRAMA SiMCosta”
+                Msc. Ella Soares Pereira (SiMCosta)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">12:10-13:20</span> - Almoço</p>
+            </li>
+            <div>
+              <h4>SESSÃO 2: Pesquisas em Oceanografia Física</h4>
+            </div>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">13:20-13:45</span> - “MONIPORT AMBIDADOS: EXPERIÊNCIA COM BOIAS E LINHAS DE FUNDEIO”
+                  - MONIPORT AMBIDADOS</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column" data-toggle="collapse" data-target="#day-1-item-6">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">13:45-14:10</span> - “AMARRAS PRÓPRIAS PARA FUNDEIO DE BOIAS - COFORJA”
+                  - Sr. Fernando Valbert (COFORJA)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">14:10-14:35</span> - “APPLICATION OF INTERNATIONAL MOORING STANDARDS TO OCEANOGRAPHIC MOORING DESIGN AND ANALYSIS”
+                  - Sr. Ryan Nicoll (DSA) e Sr. Peter Jansen (CSIRO Australia)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">14:35-15:00</span> - “APPLICATION OF INTERNATIONAL MOORING STANDARDS TO OCEANOGRAPHIC MOORING DESIGN AND ANALYSIS”
+                - Sr. Ryan Nicoll (DSA) e Sr. Peter Jansen (CSIRO Australia)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">15:00-15:20</span> - Coffee Break</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">15:20-15:45</span> - “APPLICATION OF INTERNATIONAL MOORING STANDARDS TO OCEANOGRAPHIC MOORING DESIGN AND ANALYSIS”
+                  - Sr. Ryan Nicoll (DSA) e Sr. Peter Jansen (CSIRO Australia)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">15:45-16:10</span> - “APPLICATION OF INTERNATIONAL MOORING STANDARDS TO OCEANOGRAPHIC MOORING DESIGN AND ANALYSIS”
+                - Sr. Ryan Nicoll (DSA) e Sr. Peter Jansen (CSIRO Australia)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">16:10-16:35</span> - “APPLICATION OF INTERNATIONAL MOORING STANDARDS TO OCEANOGRAPHIC MOORING DESIGN AND ANALYSIS”
+                - Sr. Ryan Nicoll (DSA) e Sr. Peter Jansen (CSIRO Australia)</p>
+            </li>
+          </ul>
+        </div>
+        <div class="tabs__pane" id="tab-2" role="tabpanel">
+          <h3 class='text-center title text-align-center pt-2 pb-2'>DIA 2: 10 DE NOVEMBRO</h3>
+          <ul class="list-timeline list-timeline-primary">
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">09:00 - 09:10</span> - Abertura - CMG Costa Junior (CHM)</p>
+            </li>
+            <div>
+              <h4>SESSÃO 1: Programa Nacional de Boias e REMO Observacional</h4>
+            </div>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">09:10-09:30</span> - “PROGRAMA NACIONAL DE BOIAS (PNBOIA) E REMO OBSERVACIONAL (REMObs): AVANÇOS E PERSPECTIVAS” - Ten. Tobias Ferreira (CHM)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">09:30-09:50</span> - “GESTÃO OPERACIONAL DOS PROGRAMAS”
+              - Ten. Tobias Ferreira (CHM)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column" data-toggle="collapse" data-target="#day-1-item-4">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">09:50-10:10</span> - “CONTROLE DE QUALIDADE DE DADOS”
+              - Felippe Galdino (CHM)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">10:10-10:30</span> - “SENSORES E DESENVOLVIMENTO DE TECNOLOGIAS”
+                - Natália (CHM)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column" data-toggle="collapse" data-target="#day-1-item-6">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">10:30-10:50</span> - “SISTEMAS E SOFTWARES UTILIZADOS PELO PNBOIA/REMOBS”
+                - Felippe Galdino (CHM)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">10:50-11:10</span> - Coffee Break</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">11:10-11:30</span> - “LINHAS DE FUNDEIO”
+                - Dsc. Fábio Nascimento (LIOc/COPPE)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column" data-toggle="collapse" data-target="#day-1-item-6">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">11:30-11:50</span> - “DESAFIOS EM SISTEMAS DE FUNDEIOS EM ÁGUAS RASAS – PROGRAMA SiMCosta”
+                - Msc. Ella Soares Pereira (SiMCosta)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">11:50-12:10</span> - “DESAFIOS EM SISTEMAS DE FUNDEIOS EM ÁGUAS RASAS – PROGRAMA SiMCosta”
+                Msc. Ella Soares Pereira (SiMCosta)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">12:10-13:20</span> - Almoço</p>
+            </li>
+            <div>
+              <h4>SESSÃO 2: Pesquisas em Oceanografia Física</h4>
+            </div>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">13:20-13:45</span> - “MONIPORT AMBIDADOS: EXPERIÊNCIA COM BOIAS E LINHAS DE FUNDEIO”
+                  - MONIPORT AMBIDADOS</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column" data-toggle="collapse" data-target="#day-1-item-6">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">13:45-14:10</span> - “AMARRAS PRÓPRIAS PARA FUNDEIO DE BOIAS - COFORJA”
+                  - Sr. Fernando Valbert (COFORJA)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">14:10-14:35</span> - “APPLICATION OF INTERNATIONAL MOORING STANDARDS TO OCEANOGRAPHIC MOORING DESIGN AND ANALYSIS”
+                  - Sr. Ryan Nicoll (DSA) e Sr. Peter Jansen (CSIRO Australia)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">14:35-15:00</span> - “APPLICATION OF INTERNATIONAL MOORING STANDARDS TO OCEANOGRAPHIC MOORING DESIGN AND ANALYSIS”
+                - Sr. Ryan Nicoll (DSA) e Sr. Peter Jansen (CSIRO Australia)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">15:00-15:20</span> - Coffee Break</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">15:20-15:45</span> - “APPLICATION OF INTERNATIONAL MOORING STANDARDS TO OCEANOGRAPHIC MOORING DESIGN AND ANALYSIS”
+                  - Sr. Ryan Nicoll (DSA) e Sr. Peter Jansen (CSIRO Australia)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">15:45-16:10</span> - “APPLICATION OF INTERNATIONAL MOORING STANDARDS TO OCEANOGRAPHIC MOORING DESIGN AND ANALYSIS”
+                - Sr. Ryan Nicoll (DSA) e Sr. Peter Jansen (CSIRO Australia)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">16:10-16:35</span> - “APPLICATION OF INTERNATIONAL MOORING STANDARDS TO OCEANOGRAPHIC MOORING DESIGN AND ANALYSIS”
+                - Sr. Ryan Nicoll (DSA) e Sr. Peter Jansen (CSIRO Australia)</p>
+            </li>
+          </ul>
+        </div>
+        <div class="tabs__pane" id="tab-3" role="tabpanel">
+          <h3 class='text-center title text-align-center pt-2 pb-2'>DIA 3: 11 DE NOVEMBRO</h3>
+          <ul class="list-timeline list-timeline-primary">
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">09:00 - 09:10</span> - Abertura - CMG Costa Junior (CHM)</p>
+            </li>
+            <div>
+              <h4>SESSÃO 1: Programa Nacional de Boias e REMO Observacional</h4>
+            </div>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">09:10-09:30</span> - “PROGRAMA NACIONAL DE BOIAS (PNBOIA) E REMO OBSERVACIONAL (REMObs): AVANÇOS E PERSPECTIVAS” - Ten. Tobias Ferreira (CHM)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">09:30-09:50</span> - “GESTÃO OPERACIONAL DOS PROGRAMAS”
+              - Ten. Tobias Ferreira (CHM)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column" data-toggle="collapse" data-target="#day-1-item-4">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">09:50-10:10</span> - “CONTROLE DE QUALIDADE DE DADOS”
+              - Felippe Galdino (CHM)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">10:10-10:30</span> - “SENSORES E DESENVOLVIMENTO DE TECNOLOGIAS”
+                - Natália (CHM)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column" data-toggle="collapse" data-target="#day-1-item-6">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">10:30-10:50</span> - “SISTEMAS E SOFTWARES UTILIZADOS PELO PNBOIA/REMOBS”
+                - Felippe Galdino (CHM)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">10:50-11:10</span> - Coffee Break</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">11:10-11:30</span> - “LINHAS DE FUNDEIO”
+                - Dsc. Fábio Nascimento (LIOc/COPPE)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column" data-toggle="collapse" data-target="#day-1-item-6">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">11:30-11:50</span> - “DESAFIOS EM SISTEMAS DE FUNDEIOS EM ÁGUAS RASAS – PROGRAMA SiMCosta”
+                - Msc. Ella Soares Pereira (SiMCosta)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">11:50-12:10</span> - “DESAFIOS EM SISTEMAS DE FUNDEIOS EM ÁGUAS RASAS – PROGRAMA SiMCosta”
+                Msc. Ella Soares Pereira (SiMCosta)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">12:10-13:20</span> - Almoço</p>
+            </li>
+            <div>
+              <h4>SESSÃO 2: Pesquisas em Oceanografia Física</h4>
+            </div>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">13:20-13:45</span> - “MONIPORT AMBIDADOS: EXPERIÊNCIA COM BOIAS E LINHAS DE FUNDEIO”
+                  - MONIPORT AMBIDADOS</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column" data-toggle="collapse" data-target="#day-1-item-6">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">13:45-14:10</span> - “AMARRAS PRÓPRIAS PARA FUNDEIO DE BOIAS - COFORJA”
+                  - Sr. Fernando Valbert (COFORJA)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">14:10-14:35</span> - “APPLICATION OF INTERNATIONAL MOORING STANDARDS TO OCEANOGRAPHIC MOORING DESIGN AND ANALYSIS”
+                  - Sr. Ryan Nicoll (DSA) e Sr. Peter Jansen (CSIRO Australia)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">14:35-15:00</span> - “APPLICATION OF INTERNATIONAL MOORING STANDARDS TO OCEANOGRAPHIC MOORING DESIGN AND ANALYSIS”
+                - Sr. Ryan Nicoll (DSA) e Sr. Peter Jansen (CSIRO Australia)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">15:00-15:20</span> - Coffee Break</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">15:20-15:45</span> - “APPLICATION OF INTERNATIONAL MOORING STANDARDS TO OCEANOGRAPHIC MOORING DESIGN AND ANALYSIS”
+                  - Sr. Ryan Nicoll (DSA) e Sr. Peter Jansen (CSIRO Australia)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">15:45-16:10</span> - “APPLICATION OF INTERNATIONAL MOORING STANDARDS TO OCEANOGRAPHIC MOORING DESIGN AND ANALYSIS”
+                - Sr. Ryan Nicoll (DSA) e Sr. Peter Jansen (CSIRO Australia)</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm text-uppercase"><span class="text-inverse op-8">16:10-16:35</span> - “APPLICATION OF INTERNATIONAL MOORING STANDARDS TO OCEANOGRAPHIC MOORING DESIGN AND ANALYSIS”
+                - Sr. Ryan Nicoll (DSA) e Sr. Peter Jansen (CSIRO Australia)</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

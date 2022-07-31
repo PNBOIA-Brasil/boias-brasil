@@ -16,10 +16,14 @@ body {
   // text-decoration: none;
   // font-weight: 500;
   // }
-
-
 }
 
+a{
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+  }
+}
 // .body-margin {
 //   margin-top: 20px;
 // }
